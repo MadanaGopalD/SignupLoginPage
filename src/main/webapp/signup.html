@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Signup</title>
+</head>
+<style>
+	table {
+	background-color: blue; 
+	border: 2px solid black;
+	}
+	table tr td{
+	padding: 10px;
+	color: white;
+	font-size: 20px;
+	}
+	input{
+	font-size: 20px;
+	}
+</style>
+<script >
+	 function validateData()
+	{
+		var pwd=document.getElementById("pwd");
+		var cpwd=document.getElementById("cpwd");
+		if(pwd.value!=cpwd.value)
+			{
+			alert("Password doesn't match");
+			return false;
+			}
+	}
+</script>
+<body>
+<center>
+<form action="signup" method="post" >
+<table >
+	<tr>
+		<td>User name</td>
+		<td><input type="text" name="uname" id="uname" required/>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td><input type="text" name="email" id="email" required/>
+	</tr>
+	<tr>
+		<td>Phoneno</td>
+		<td><input type="text" name="phno" id="phno" required/>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type="password" name="pwd" id="pwd" required/>
+	</tr>
+	<tr>
+		<td>Confirm Password</td>
+		<td><input type="password" name="cpwd" id="cpwd" required/>
+	</tr>
+	<tr>
+		<td>DOB</td>
+		<td><input type="date" name="date" id="date" required/>
+	</tr>
+	<tr>
+		<td><input type="submit" onclick="return validateData()" />
+	</tr>
+</table>
+</form>
+</body>
+</html>
